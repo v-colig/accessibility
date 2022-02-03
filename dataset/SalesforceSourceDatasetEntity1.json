@@ -1,0 +1,15 @@
+{
+	"name": "SalesforceSourceDatasetEntity1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SalesforceLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SalesforceObject",
+		"typeProperties": {
+			"objectApiName": "Account"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

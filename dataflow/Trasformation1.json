@@ -1,0 +1,124 @@
+{
+	"name": "Trasformation1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "StagingParquet1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlDWDestinationStore1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Select1"
+				},
+				{
+					"name": "DerivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Id as string,",
+				"          IsDeleted as boolean,",
+				"          MasterRecordId as string,",
+				"          Name as string,",
+				"          Type as string,",
+				"          ParentId as string,",
+				"          BillingStreet as string,",
+				"          BillingCity as string,",
+				"          BillingState as string,",
+				"          BillingPostalCode as string,",
+				"          BillingCountry as string,",
+				"          BillingLatitude as decimal(38,18),",
+				"          BillingLongitude as decimal(38,18),",
+				"          BillingGeocodeAccuracy as string,",
+				"          ShippingStreet as string,",
+				"          ShippingCity as string,",
+				"          ShippingState as string,",
+				"          ShippingPostalCode as string,",
+				"          ShippingCountry as string,",
+				"          ShippingLatitude as decimal(38,18),",
+				"          ShippingLongitude as decimal(38,18),",
+				"          ShippingGeocodeAccuracy as string,",
+				"          Phone as string,",
+				"          Fax as string,",
+				"          AccountNumber as string,",
+				"          Website as string,",
+				"          PhotoUrl as string,",
+				"          Sic as string,",
+				"          Industry as string,",
+				"          AnnualRevenue as decimal(38,18),",
+				"          NumberOfEmployees as integer,",
+				"          Ownership as string,",
+				"          TickerSymbol as string,",
+				"          Description as string,",
+				"          Rating as string,",
+				"          Site as string,",
+				"          OwnerId as string,",
+				"          CreatedDate as timestamp,",
+				"          CreatedById as string,",
+				"          LastModifiedDate as timestamp,",
+				"          LastModifiedById as string,",
+				"          SystemModstamp as timestamp,",
+				"          LastActivityDate as timestamp,",
+				"          LastViewedDate as timestamp,",
+				"          LastReferencedDate as timestamp,",
+				"          IsCustomerPortal as boolean,",
+				"          Jigsaw as string,",
+				"          JigsawCompanyId as string,",
+				"          CleanStatus as string,",
+				"          AccountSource as string,",
+				"          DunsNumber as string,",
+				"          Tradestyle as string,",
+				"          NaicsCode as string,",
+				"          NaicsDesc as string,",
+				"          YearStarted as string,",
+				"          SicDesc as string,",
+				"          DandbCompanyId as string,",
+				"          CustomerPriority__c as string,",
+				"          SLA__c as string,",
+				"          Active__c as string,",
+				"          NumberofLocations__c as decimal(38,18),",
+				"          UpsellOpportunity__c as string,",
+				"          SLASerialNumber__c as string,",
+				"          SLAExpirationDate__c as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> source1",
+				"source1 select(mapColumn(",
+				"          Name",
+				"     ),",
+				"     skipDuplicateMapInputs: false,",
+				"     skipDuplicateMapOutputs: false) ~> Select1",
+				"Select1 derive(Name = substring(Name, 1, 5)) ~> DerivedColumn1",
+				"DerivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          name as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     staged: false,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+			]
+		}
+	}
+}

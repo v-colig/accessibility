@@ -1,0 +1,291 @@
+{
+	"name": "StagingParquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "file.parquet",
+				"folderPath": "dataflow",
+				"container": "staging"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Id",
+				"type": "UTF8"
+			},
+			{
+				"name": "IsDeleted",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "MasterRecordId",
+				"type": "UTF8"
+			},
+			{
+				"name": "Name",
+				"type": "UTF8"
+			},
+			{
+				"name": "Type",
+				"type": "UTF8"
+			},
+			{
+				"name": "ParentId",
+				"type": "UTF8"
+			},
+			{
+				"name": "BillingStreet",
+				"type": "UTF8"
+			},
+			{
+				"name": "BillingCity",
+				"type": "UTF8"
+			},
+			{
+				"name": "BillingState",
+				"type": "UTF8"
+			},
+			{
+				"name": "BillingPostalCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "BillingCountry",
+				"type": "UTF8"
+			},
+			{
+				"name": "BillingLatitude",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "BillingLongitude",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "BillingGeocodeAccuracy",
+				"type": "UTF8"
+			},
+			{
+				"name": "ShippingStreet",
+				"type": "UTF8"
+			},
+			{
+				"name": "ShippingCity",
+				"type": "UTF8"
+			},
+			{
+				"name": "ShippingState",
+				"type": "UTF8"
+			},
+			{
+				"name": "ShippingPostalCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "ShippingCountry",
+				"type": "UTF8"
+			},
+			{
+				"name": "ShippingLatitude",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ShippingLongitude",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "ShippingGeocodeAccuracy",
+				"type": "UTF8"
+			},
+			{
+				"name": "Phone",
+				"type": "UTF8"
+			},
+			{
+				"name": "Fax",
+				"type": "UTF8"
+			},
+			{
+				"name": "AccountNumber",
+				"type": "UTF8"
+			},
+			{
+				"name": "Website",
+				"type": "UTF8"
+			},
+			{
+				"name": "PhotoUrl",
+				"type": "UTF8"
+			},
+			{
+				"name": "Sic",
+				"type": "UTF8"
+			},
+			{
+				"name": "Industry",
+				"type": "UTF8"
+			},
+			{
+				"name": "AnnualRevenue",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "NumberOfEmployees",
+				"type": "INT32"
+			},
+			{
+				"name": "Ownership",
+				"type": "UTF8"
+			},
+			{
+				"name": "TickerSymbol",
+				"type": "UTF8"
+			},
+			{
+				"name": "Description",
+				"type": "UTF8"
+			},
+			{
+				"name": "Rating",
+				"type": "UTF8"
+			},
+			{
+				"name": "Site",
+				"type": "UTF8"
+			},
+			{
+				"name": "OwnerId",
+				"type": "UTF8"
+			},
+			{
+				"name": "CreatedDate",
+				"type": "INT96"
+			},
+			{
+				"name": "CreatedById",
+				"type": "UTF8"
+			},
+			{
+				"name": "LastModifiedDate",
+				"type": "INT96"
+			},
+			{
+				"name": "LastModifiedById",
+				"type": "UTF8"
+			},
+			{
+				"name": "SystemModstamp",
+				"type": "INT96"
+			},
+			{
+				"name": "LastActivityDate",
+				"type": "INT96"
+			},
+			{
+				"name": "LastViewedDate",
+				"type": "INT96"
+			},
+			{
+				"name": "LastReferencedDate",
+				"type": "INT96"
+			},
+			{
+				"name": "IsCustomerPortal",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "Jigsaw",
+				"type": "UTF8"
+			},
+			{
+				"name": "JigsawCompanyId",
+				"type": "UTF8"
+			},
+			{
+				"name": "CleanStatus",
+				"type": "UTF8"
+			},
+			{
+				"name": "AccountSource",
+				"type": "UTF8"
+			},
+			{
+				"name": "DunsNumber",
+				"type": "UTF8"
+			},
+			{
+				"name": "Tradestyle",
+				"type": "UTF8"
+			},
+			{
+				"name": "NaicsCode",
+				"type": "UTF8"
+			},
+			{
+				"name": "NaicsDesc",
+				"type": "UTF8"
+			},
+			{
+				"name": "YearStarted",
+				"type": "UTF8"
+			},
+			{
+				"name": "SicDesc",
+				"type": "UTF8"
+			},
+			{
+				"name": "DandbCompanyId",
+				"type": "UTF8"
+			},
+			{
+				"name": "CustomerPriority__c",
+				"type": "UTF8"
+			},
+			{
+				"name": "SLA__c",
+				"type": "UTF8"
+			},
+			{
+				"name": "Active__c",
+				"type": "UTF8"
+			},
+			{
+				"name": "NumberofLocations__c",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "UpsellOpportunity__c",
+				"type": "UTF8"
+			},
+			{
+				"name": "SLASerialNumber__c",
+				"type": "UTF8"
+			},
+			{
+				"name": "SLAExpirationDate__c",
+				"type": "INT96"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "0228yuexdemo",
+	"location": "EastUS",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "283f4080-42dd-4697-bfa8-4659e1b8cc2a",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+		"userAssignedIdentities": {
+			"/subscriptions/1e42591f-1f0c-4c5a-b7f2-a268f6105ec5/resourcegroups/ADF/providers/Microsoft.ManagedIdentity/userAssignedIdentities/madridtest_UAMI": {
+				"clientId": "778aa8a9-c606-4033-aa4f-ac7870e4cf96",
+				"principalId": "bbe757e8-80ca-4062-83d8-7459f1e5d8cc"
+			}
+		}
+	}
+}

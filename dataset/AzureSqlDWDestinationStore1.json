@@ -1,0 +1,21 @@
+{
+	"name": "AzureSqlDWDestinationStore1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlDWLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "name",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Table_5]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

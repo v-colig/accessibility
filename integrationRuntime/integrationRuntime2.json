@@ -1,0 +1,16 @@
+{
+	"name": "integrationRuntime2",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/eecfb6ee-86f1-45e1-bb7e-1f5b6bdf3951/resourcegroups/adms_ux_test/providers/Microsoft.DataFactory/factories/MadridE2E/integrationruntimes/MadridE2E",
+				"authorizationType": "Rbac",
+				"credential": {
+					"referenceName": "credential1",
+					"type": "CredentialReference"
+				}
+			}
+		}
+	}
+}
