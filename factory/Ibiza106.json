@@ -1,0 +1,9 @@
+{
+	"name": "Ibiza106",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "26775394-7e9e-4eea-9a19-2d706a6879fb",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}
